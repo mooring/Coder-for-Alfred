@@ -19,7 +19,7 @@ query = '{query}'
 for idx in apis:
 	fb.add_item(
 		apis[idx]['api'],
-		subtitle=apis[idx]['title'] + ' "' + query + '"',
+		subtitle=apis[idx]['title'] + ' "' + query[0:30] + '..."',
 		arg='{"query":"%s","api":"%s"}' % (query, apis[idx]['api']),
 		icon=apis[idx]['icon'] +'.png'
 	)
