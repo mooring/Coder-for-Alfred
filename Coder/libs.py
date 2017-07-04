@@ -1,4 +1,4 @@
-import sys, base64, os, urllib, os, hashlib, socket, struct, json, xml.dom.minidom
+import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom
 
 
 class CoderLib:
@@ -36,11 +36,13 @@ class CoderLib:
 		return '%s' % socket.inet_ntoa(struct.pack('!L', int(query)))
 		
 	def jsonformat(self, query):
-		return json.loads(query).dumps(query, sort_keys=True, indent=4, separators=(',', ':'))
+		data = json.loads(query)
+		return json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
 
 		
 	def jsoncompact(self, query):
-		return json.loads(query).dumps(query, sort_keys=True, separators=(',', ':'))
+		data = json.loads(query)
+		return json.dumps(data, sort_keys=True, separators=(',', ':'))
 
 		
 	def tidyxml(self, query):

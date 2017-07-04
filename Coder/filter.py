@@ -13,14 +13,19 @@ apis = {
 }
 
 from feedback import Feedback
+import base64, json
+
+def _b64(qry):
+    return base64.b64encode(qry)
+    
 
 fb = Feedback()
-query = '{query}'
+query = "{query}"
 for idx in apis:
 	fb.add_item(
 		apis[idx]['api'],
-		subtitle=apis[idx]['title'] + ' "' + query[0:30] + '..."',
-		arg='{"query":"%s","api":"%s"}' % (query, apis[idx]['api']),
+		subtitle='%s "%s..."' % (apis[idx]['title'] , query[:30]),
+		arg='{"api":"%s","query":"%s"}' % (apis[idx]['api'], _b64(query)),
 		icon=apis[idx]['icon'] +'.png'
 	)
 print fb

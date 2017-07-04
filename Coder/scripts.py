@@ -1,8 +1,8 @@
 from libs import CoderLib
-import sys, json
+import sys, json, base64
 
 temp   = '{query}'
-cmder  = json.loads(temp, encoding='utf-8')
+cmder  = json.loads(temp)
 api    = getattr(CoderLib(), cmder['api'])
-query  = api(cmder['query'])
+query  = api(base64.b64decode(cmder['query']))
 sys.stdout.write(query)
