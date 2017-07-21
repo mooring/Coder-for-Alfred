@@ -37,12 +37,12 @@ class CoderLib:
 		
 	def jsonformat(self, query):
 		data = json.loads(query)
-		return json.dumps(data, sort_keys=True, indent=4, separators=(',', ':'))
+		return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ':'))
 
 		
 	def jsoncompact(self, query):
 		data = json.loads(query)
-		return json.dumps(data, sort_keys=True, separators=(',', ':'))
+		return json.dumps(data, sort_keys=True, ensure_ascii=False, separators=(',', ':'))
 
 		
 	def tidyxml(self, query):
