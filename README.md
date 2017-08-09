@@ -40,6 +40,7 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 5. json
 6. xml
 7. sha
+8. date
 
 ## configuration
 
