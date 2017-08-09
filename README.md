@@ -5,7 +5,6 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 *and all of this is done offline, without any net requests*
 
 ![Screen Shot](https://github.com/mooring/Coder-for-Alfred/blob/master/screen-shot.png?raw=true)
-![Screen Shot](https://github.com/mooring/Coder-for-Alfred/blob/master/md5.png?raw=true)
 
 ## features
 
@@ -23,6 +22,8 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 
 
 ## usage
+![Screen Shot](https://github.com/mooring/Coder-for-Alfred/blob/master/md5.png?raw=true)
+
 
 ### by shortcut keys
 
