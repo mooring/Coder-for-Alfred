@@ -1,5 +1,7 @@
 # Coder
 
+![Icon](https://github.com/mooring/Coder-for-Alfred/blob/master/Coder/icons/coder.png?raw=true)
+
 Speed up your normal coding transform like md5, sha1, base64 encode, base64 decode...
 
 *and all of this is done offline, without any net requests*
