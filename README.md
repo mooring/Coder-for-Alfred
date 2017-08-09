@@ -6,7 +6,7 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 
 *and all of this is done offline, without any net requests*
 
-[Click Here to Download](https://raw.githubusercontent.com/mooring/Coder-for-Alfred/master/Coder.alfredworkflow)
+# [Click Here to Download](https://raw.githubusercontent.com/mooring/Coder-for-Alfred/master/Coder.alfredworkflow)
 
 ![Screen Shot](https://github.com/mooring/Coder-for-Alfred/blob/master/screen-shot.png?raw=true)
 
