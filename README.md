@@ -31,6 +31,10 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 1. selecting text , and then press Ctrl + Alt + Cmd + J
 2. select algorithm and then press enter key
 
+> or 
+1. copy multiline text into your clipboard, then press Ctrl + Alt + Cmd + K
+2. type any charactor and select any algorithm with Enter Key
+
 ## by keywords
 
 1. md5
