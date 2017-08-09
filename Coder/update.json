@@ -1,5 +1,5 @@
 {
-    "version": 1.0,
+    "version": 1.0.2,
     "download_url": "https://github.com/mooring/Coder-for-Alfred/blob/master/Coder.alfredworkflow",
-    "description": "Common Coder for Alfred."
+    "description": "Daily Text Transformer for Programmers"
 }

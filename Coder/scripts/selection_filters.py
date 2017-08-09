@@ -1,3 +1,2 @@
 from apis import showMenuItems
-query = "{query}"
-showMenuItems(query)
+showMenuItems("{query}")
