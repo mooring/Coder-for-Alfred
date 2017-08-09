@@ -19,6 +19,7 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 - tidy xml
 - ip2long
 - long2ip
+- timestamp to GMT string
 
 
 ## usage
