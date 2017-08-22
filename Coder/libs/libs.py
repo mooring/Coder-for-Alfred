@@ -24,7 +24,7 @@ class CoderLib:
 		return hashlib.md5(query).hexdigest()
 
 	def date(self, query):
-		return datetime.fromtimestamp(int(query)).strftime('%Ec')
+		return datetime.fromtimestamp(int(query[:10])).strftime('%Ec')
 
 	def sha1(self, query):
 		return hashlib.sha1(query).hexdigest()
