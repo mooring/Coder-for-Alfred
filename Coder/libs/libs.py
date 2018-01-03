@@ -1,7 +1,7 @@
 import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom
+sys.path.append(os.path.abspath(os.path.join('./')))
 from datetime import datetime
-
-
+import jsbeautifier, cssbeautifier
 
 class CoderLib:
 
@@ -42,6 +42,26 @@ class CoderLib:
 	def jsonencode(self, query):
 		data = json.loads(query)
 		return json.dumps(data, sort_keys=True, ensure_ascii=False, separators=(',', ':'))
+	
+	def jsbeautify(self, query):
+		options = jsbeautifier.default_options()
+		options.indent_size = 4
+		options.indent_char = ' '
+		options.preserve_newlines = True
+		options.jslint_happy = False
+		options.keep_array_indentation = True
+		options.brace_style = 'collapse'
+		options.indent_level = 0
+		return jsbeautifier.beautify(query, options)
+	
+	def cssbeautify(self, query):
+		options = cssbeautifier.default_options()
+		options.indent_size = 4
+		options.indent_char = ' '
+		options.newline_between_rules = True
+		options.preserve_newlines = True
+		options.space_around_selector_separator = True
+		return cssbeautifier.beautify(query, options)
 
 	def tidyxml(self, query):
 		return xml.dom.minidom.parseString(query).toprettyxml()
