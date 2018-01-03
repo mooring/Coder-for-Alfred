@@ -25,6 +25,8 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 - ip2long
 - long2ip
 - timestamp to GMT string
+- javascript beautify
+- css beautify
 
 
 ## usage
@@ -50,6 +52,8 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 6. xml
 7. sha
 8. date
+9. js
+10. css
 
 ## configuration
 
