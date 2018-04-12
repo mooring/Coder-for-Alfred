@@ -47,7 +47,7 @@ def encodeClipBoard():
 		feedback.add_item(
 			apis[idx]['api'],
 			subtitle='%s "%s..."' % (apis[idx]['title'] , query[:30]),
-			arg='{"api":"%s","query":"%s"}' % (apis[idx]['api'], _b64(query)),
+			arg='{"api":"%s","query":"%s"}' % (apis[idx]['api'], 'Y2xpcGJvYXJk'),
 			icon= apis[idx]['icon'] + '.png'
 		)
 	print feedback
