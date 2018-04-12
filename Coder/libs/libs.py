@@ -2,6 +2,7 @@ import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom, 
 sys.path.append(os.path.abspath(os.path.join('./')))
 from datetime import datetime
 import jsbeautifier, cssbeautifier
+import cssmin
 
 class CoderLib:
 
@@ -84,6 +85,10 @@ class CoderLib:
 		options.preserve_newlines = True
 		options.space_around_selector_separator = True
 		return cssbeautifier.beautify(query, options)
+        
+	def cssminify(self, query):
+		query = self._query(query)
+		return cssmin.cssmin(query)
 
 	def tidyxml(self, query):
 		query = self._query(query)
