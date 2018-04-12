@@ -27,6 +27,7 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 - timestamp to GMT string
 - javascript beautify
 - css beautify
+- css minify
 
 
 ## usage
