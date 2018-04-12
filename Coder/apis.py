@@ -17,7 +17,8 @@ apis = {
 	10  : {'api':'tidyxml', 'title':'tidy XML','icon':'53010B17-4D31-4E62-8CB3-B21744F24385'},
 	11  : {'api': 'date', 'title':'convert Unix Timestamp to GMT Date String','icon':'2A57FA60-0513-47EA-B1BE-EF1C71E76833'},
 	12  : {'api': 'jsbeautify', 'title':'beautify Javascript','icon':'C533B282-274D-4977-82F8-693FD73F36E8'},
-	13  : {'api': 'cssbeautify', 'title':'beautify CSS','icon':'884C12A9-1706-40C3-92C4-0C807B72D57B'}
+	13  : {'api': 'cssbeautify', 'title':'beautify CSS','icon':'884C12A9-1706-40C3-92C4-0C807B72D57B'},
+	14  : {'api': 'cssminify', 'title':'minify CSS','icon':'0C3A84DF-F228-4CA3-9272-504E8D9D2854'}
 }
 
 def _b64(qry):
