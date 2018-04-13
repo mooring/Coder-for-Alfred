@@ -1,5 +1,6 @@
 {
     "version": 1.0.6,
-    "download_url": "https://github.com/mooring/Coder-for-Alfred/blob/master/Coder.alfredworkflow",
-    "description": "Daily Text Transformer for Programmers"
+    "download_url": "https://github.com/mooring/Coder-for-Alfred/raw/master/Coder.alfredworkflow",
+    "remote_json":  "https://raw.githubusercontent.com/mooring/Coder-for-Alfred/master/Coder/update.json",
+    "description":  "Daily Text Transformer for Programmers"
 }
