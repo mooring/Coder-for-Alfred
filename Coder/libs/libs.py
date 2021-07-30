@@ -2,6 +2,7 @@ import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom, 
 sys.path.append(os.path.abspath(os.path.join('./')))
 from datetime import datetime
 import jsbeautifier, cssbeautifier
+import demjson
 import cssmin
 
 class CoderLib:
@@ -17,7 +18,7 @@ class CoderLib:
 
 	def _query(self, str):
 		return str if str != 'clipboard' else self._clipboard()
-		
+
 	def urlencode(self, query):
 		query = self._query(query)
 		return urllib.quote_plus(query)
@@ -56,14 +57,22 @@ class CoderLib:
 
 	def jsondecode(self, query):
 		query = self._query(query)
-		data = json.loads(query)
+		data = demjson.decode(query)
+		#data = json.loads(query)
+		return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ':'))
+
+	def jsonlint(self, query):
+		query = self._query(query)
+		data = demjson.jsonlint(query)
+		#data = json.loads(query)
 		return json.dumps(data, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ':'))
 
 	def jsonencode(self, query):
 		query = self._query(query)
-		data = json.loads(query)
+		data = demjson.decode(query)
+		#data = json.loads(query)
 		return json.dumps(data, sort_keys=True, ensure_ascii=False, separators=(',', ':'))
-	
+
 	def jsbeautify(self, query):
 		query = self._query(query)
 		options = jsbeautifier.default_options()
@@ -75,7 +84,7 @@ class CoderLib:
 		options.brace_style = 'collapse'
 		options.indent_level = 0
 		return jsbeautifier.beautify(query, options)
-	
+
 	def cssbeautify(self, query):
 		query = self._query(query)
 		options = cssbeautifier.default_options()
@@ -85,7 +94,7 @@ class CoderLib:
 		options.preserve_newlines = True
 		options.space_around_selector_separator = True
 		return cssbeautifier.beautify(query, options)
-        
+
 	def cssminify(self, query):
 		query = self._query(query)
 		return cssmin.cssmin(query)
@@ -93,4 +102,3 @@ class CoderLib:
 	def tidyxml(self, query):
 		query = self._query(query)
 		return xml.dom.minidom.parseString(query).toprettyxml()
-
