@@ -7,12 +7,13 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 
 *and all of this is done offline, without any net requests*
 
-# Version: **1.0.6**
+# Version: **1.0.8**
 
 # [Click Here to Download](https://raw.githubusercontent.com/mooring/Coder-for-Alfred/master/Coder.alfredworkflow)
 
 
 ![Screen Shot](https://github.com/mooring/Coder-for-Alfred/blob/master/screen-shot.png?raw=true)
+
 
 ## features
 
@@ -28,9 +29,15 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 - ip2long
 - long2ip
 - timestamp to GMT string
+- get current timestamp
 - javascript beautify
 - css beautify
 - css minify
+
+## changelog
+- 1.0.8
+  - add timestamp function
+  - optimize json encode/decode with demjson lib
 
 
 ## usage
@@ -56,8 +63,9 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 6. xml
 7. sha
 8. date
-9. js
-10. css
+9. time
+10. js
+11. css
 
 ## configuration
 
