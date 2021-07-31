@@ -1,4 +1,4 @@
-import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom, subprocess
+import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom, subprocess, calendar, time
 sys.path.append(os.path.abspath(os.path.join('./')))
 from datetime import datetime
 import jsbeautifier, cssbeautifier
@@ -42,6 +42,9 @@ class CoderLib:
 	def date(self, query):
 		query = self._query(query)
 		return datetime.fromtimestamp(int(query[:10])).strftime('%Ec')
+
+	def timestamp(self):
+		return '%s' % calendar.timegm(time.gmtime())
 
 	def sha1(self, query):
 		query = self._query(query)

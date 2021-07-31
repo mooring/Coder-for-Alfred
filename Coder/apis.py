@@ -17,9 +17,10 @@ apis = {
 	10  : {'api':'jsonlint', 'title':'JSON lint','icon':'A5478AA5-8D96-4F9A-B3E1-0498562F2404'},
 	11  : {'api':'tidyxml', 'title':'tidy XML','icon':'53010B17-4D31-4E62-8CB3-B21744F24385'},
 	12  : {'api': 'date', 'title':'convert Unix Timestamp to GMT Date String','icon':'2A57FA60-0513-47EA-B1BE-EF1C71E76833'},
-	13  : {'api': 'jsbeautify', 'title':'beautify Javascript','icon':'C533B282-274D-4977-82F8-693FD73F36E8'},
-	14  : {'api': 'cssbeautify', 'title':'beautify CSS','icon':'884C12A9-1706-40C3-92C4-0C807B72D57B'},
-	15  : {'api': 'cssminify', 'title':'minify CSS','icon':'0C3A84DF-F228-4CA3-9272-504E8D9D2854'}
+    13  : {'api': 'timestamp', 'title':'get Unix Timestamp','icon':'2A57FA60-0513-47EA-B1BE-EF1C71E76833'},
+	14  : {'api': 'jsbeautify', 'title':'beautify Javascript','icon':'C533B282-274D-4977-82F8-693FD73F36E8'},
+	15  : {'api': 'cssbeautify', 'title':'beautify CSS','icon':'884C12A9-1706-40C3-92C4-0C807B72D57B'},
+	16  : {'api': 'cssminify', 'title':'minify CSS','icon':'0C3A84DF-F228-4CA3-9272-504E8D9D2854'}
 }
 
 def _b64(qry):
