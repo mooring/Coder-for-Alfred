@@ -25,13 +25,10 @@ Speed up your normal coding transform like md5, sha1, base64 encode, base64 deco
 - url decode
 - json beautify
 - json minimize
-- tidy xml
 - ip2long
 - long2ip
 - timestamp to GMT string
 - get current timestamp
-- javascript beautify
-- css beautify
 - css minify
 
 ## changelog
