@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>com.mooring.github</string>
 	<key>category</key>
-	<string>Tools</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>0B704279-3A54-47FA-84CE-97EAD0EC4325</key>
@@ -177,19 +177,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4263113A-4904-4C84-A47A-BA4A7810E1E2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7AF4C686-92FF-47AA-9680-AC3DFF2C3955</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>45F97E68-7A3D-4117-8800-C9A5B3FF7F6C</key>
 		<array>
 			<dict>
@@ -208,19 +195,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F3B81B7B-5236-40D6-B310-3FDD1B790460</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5124CCE9-59FF-42FB-BEE7-97E5E47FFA98</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7AF4C686-92FF-47AA-9680-AC3DFF2C3955</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -299,19 +273,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>0F070017-07BF-4944-BD94-A3CB7D9CA06F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>884C12A9-1706-40C3-92C4-0C807B72D57B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5124CCE9-59FF-42FB-BEE7-97E5E47FFA98</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -403,19 +364,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>7AF4C686-92FF-47AA-9680-AC3DFF2C3955</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C533B282-274D-4977-82F8-693FD73F36E8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4263113A-4904-4C84-A47A-BA4A7810E1E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -533,7 +481,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -604,7 +552,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -633,7 +581,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -683,7 +631,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -733,7 +681,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -783,7 +731,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -854,7 +802,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -904,7 +852,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -994,7 +942,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1044,7 +992,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1094,7 +1042,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1123,7 +1071,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1193,7 +1141,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1201,106 +1149,6 @@ sys.stdout.write(query)</string>
 			<string>3492ED9C-1A28-43E0-9B06-B1B4B11B4C31</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>js</string>
-				<key>subtext</key>
-				<string>'{query}'</string>
-				<key>text</key>
-				<string>buautify javascript code</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>C533B282-274D-4977-82F8-693FD73F36E8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>from libs import CoderLib
-import sys
-
-temp   = sys.argv[1]
-api    = getattr(CoderLib(), 'jsbeautify')
-query  = api(temp)
-sys.stdout.write(query)</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>4263113A-4904-4C84-A47A-BA4A7810E1E2</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>from libs import CoderLib
-import sys
-
-temp   = sys.argv[1]
-api    = getattr(CoderLib(), 'cssbeautify')
-query  = api(temp)
-sys.stdout.write(query)</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5124CCE9-59FF-42FB-BEE7-97E5E47FFA98</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>css</string>
-				<key>subtext</key>
-				<string>'{query}'</string>
-				<key>text</key>
-				<string>buautify css</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>884C12A9-1706-40C3-92C4-0C807B72D57B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1343,7 +1191,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1393,7 +1241,7 @@ encodeClipBoard()
 				<key>title</key>
 				<string>Code Selection</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -1418,7 +1266,7 @@ encodeClipBoard()
 				<key>hotkey</key>
 				<integer>40</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
+				<integer>1179648</integer>
 				<key>hotstring</key>
 				<string>K</string>
 				<key>leftcursor</key>
@@ -1456,7 +1304,7 @@ sys.stdout.write(query)</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1494,9 +1342,7 @@ sys.stdout.write(query)</string>
 				<string></string>
 				<key>script</key>
 				<string>from apis import showMenuItems
-
-showMenuItems("{query}")
-</string>
+showMenuItems("{query}")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1506,7 +1352,7 @@ showMenuItems("{query}")
 				<key>title</key>
 				<string>Code Selection</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -1529,11 +1375,11 @@ showMenuItems("{query}")
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>37</integer>
+				<integer>38</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
+				<integer>1179648</integer>
 				<key>hotstring</key>
-				<string>L</string>
+				<string>J</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1563,285 +1409,259 @@ Author: mooringniu@gmail.com</string>
 		<key>0B704279-3A54-47FA-84CE-97EAD0EC4325</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<real>1280</real>
 		</dict>
 		<key>0C3A84DF-F228-4CA3-9272-504E8D9D2854</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>1795</integer>
+			<real>1505</real>
 		</dict>
 		<key>0F070017-07BF-4944-BD94-A3CB7D9CA06F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1490</integer>
+			<real>1490</real>
 			<key>ypos</key>
-			<integer>830</integer>
+			<real>830</real>
 		</dict>
 		<key>1F145C08-20D4-4834-9B01-0CE5F657A0C4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>940</integer>
+			<real>940</real>
 		</dict>
 		<key>27AD75B4-10B6-4E1F-A8C5-E428C35162AA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>720</integer>
+			<real>720</real>
 		</dict>
 		<key>2A57FA60-0513-47EA-B1BE-EF1C71E76833</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<real>1280</real>
 		</dict>
 		<key>2BA1CEEB-918A-4820-B596-C2CD057D0689</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>140</integer>
+			<real>140</real>
 		</dict>
 		<key>30C5EE73-FBBD-41EA-B591-17978B3D64BB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>370</integer>
+			<real>370</real>
 		</dict>
 		<key>33E23831-1113-4853-A5F5-7F873BA7A4E4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>830</integer>
+			<real>830</real>
 		</dict>
 		<key>3492ED9C-1A28-43E0-9B06-B1B4B11B4C31</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1395</integer>
+			<real>1395</real>
 		</dict>
 		<key>3820260F-B578-4BB7-BB3D-5822DE664411</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>260</integer>
+			<real>260</real>
 		</dict>
 		<key>39D2051E-2A7E-4F73-BAEF-8D369B04313E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>620</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>1990</integer>
+			<real>1665</real>
 		</dict>
 		<key>40B948C0-7710-4963-BD18-1253D29E9688</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<real>1050</real>
 		</dict>
 		<key>4101A319-6934-467B-8F7F-DBD14338250A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>30</integer>
-		</dict>
-		<key>4263113A-4904-4C84-A47A-BA4A7810E1E2</key>
-		<dict>
-			<key>xpos</key>
-			<integer>415</integer>
-			<key>ypos</key>
-			<integer>1525</integer>
+			<real>30</real>
 		</dict>
 		<key>45F97E68-7A3D-4117-8800-C9A5B3FF7F6C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>260</integer>
+			<real>260</real>
 		</dict>
 		<key>4713814F-B17C-480A-94B2-9909C7E90BAA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>600</integer>
-		</dict>
-		<key>5124CCE9-59FF-42FB-BEE7-97E5E47FFA98</key>
-		<dict>
-			<key>xpos</key>
-			<integer>415</integer>
-			<key>ypos</key>
-			<integer>1655</integer>
+			<real>600</real>
 		</dict>
 		<key>53010B17-4D31-4E62-8CB3-B21744F24385</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<real>1160</real>
 		</dict>
 		<key>54CE2D23-EDD6-4798-A23E-4D66FAB1F46C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>720</integer>
+			<real>720</real>
 		</dict>
 		<key>551EC518-907C-453A-9096-745E9B6FE2DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>940</integer>
+			<real>940</real>
 		</dict>
 		<key>60880364-4942-4D3E-BC41-BCAC6F00ECD8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>830</integer>
+			<real>830</real>
 		</dict>
 		<key>727ADAE5-9203-4953-9CFC-62512E027D9B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>1395</integer>
+			<real>1395</real>
 		</dict>
 		<key>7AF4C686-92FF-47AA-9680-AC3DFF2C3955</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1340</integer>
+			<real>1340</real>
 			<key>ypos</key>
-			<integer>830</integer>
-		</dict>
-		<key>884C12A9-1706-40C3-92C4-0C807B72D57B</key>
-		<dict>
-			<key>xpos</key>
-			<integer>105</integer>
-			<key>ypos</key>
-			<integer>1655</integer>
+			<real>830</real>
 		</dict>
 		<key>93ECD4F7-42C0-40ED-BE83-A8FB16F48730</key>
 		<dict>
 			<key>xpos</key>
-			<integer>115</integer>
+			<real>120</real>
 			<key>ypos</key>
-			<integer>2075</integer>
+			<real>1750</real>
 		</dict>
 		<key>9C085A71-D40D-449B-8793-7D229D26067E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>405</integer>
+			<real>415</real>
 			<key>ypos</key>
-			<integer>2055</integer>
+			<real>1730</real>
 		</dict>
 		<key>A26F8BDF-0FDA-46A8-AA6C-55F29E50A0E1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>480</integer>
+			<real>480</real>
 		</dict>
 		<key>A5478AA5-8D96-4F9A-B3E1-0498562F2404</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<real>1050</real>
 		</dict>
 		<key>B21A1DF4-E7FD-4DBC-829B-9C3D7D3C554D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>370</integer>
+			<real>370</real>
 		</dict>
 		<key>B4766A16-AB55-4039-9D03-C6908A085B97</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<real>110</real>
 			<key>ypos</key>
-			<integer>480</integer>
+			<real>480</real>
 		</dict>
 		<key>B720B15E-3D9F-4E1A-9B7A-D5211EFF0593</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1160</integer>
-		</dict>
-		<key>C533B282-274D-4977-82F8-693FD73F36E8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>105</integer>
-			<key>ypos</key>
-			<integer>1525</integer>
+			<real>1160</real>
 		</dict>
 		<key>F086240A-F218-48E9-BCC6-B749D800452E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>415</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1925</integer>
+			<real>1615</real>
 		</dict>
 		<key>F34E4ACB-DFE6-4B22-AF80-D6CF7C42272A</key>
 		<dict>
 			<key>note</key>
 			<string>Process Clipboard</string>
 			<key>xpos</key>
-			<integer>115</integer>
+			<real>120</real>
 			<key>ypos</key>
-			<integer>1925</integer>
+			<real>1615</real>
 		</dict>
 		<key>F3B81B7B-5236-40D6-B310-3FDD1B790460</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>600</integer>
+			<real>600</real>
 		</dict>
 		<key>F4C77072-4235-4913-83EE-A710CEC825AD</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>10</integer>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>30</integer>
+			<real>30</real>
 		</dict>
 		<key>F5947FD1-095D-4B1F-8F7A-667A966CB05B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>415</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>1795</integer>
+			<real>1505</real>
 		</dict>
 		<key>FAE029E9-144A-4395-BCB6-0565B2E1C86C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<real>420</real>
 			<key>ypos</key>
-			<integer>140</integer>
+			<real>140</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.8</string>
+	<string>1.0.9</string>
 	<key>webaddress</key>
 	<string>https://github.com/mooring/Coder-for-Alfred</string>
 </dict>
