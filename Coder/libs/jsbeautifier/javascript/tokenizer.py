@@ -53,7 +53,7 @@ class Tokenizer:
         self.block_comment_pattern = re.compile('([\s\S]*?)((?:\*\/)|$)')
 
         # comment ends just before nearest linefeed or end of file
-        self.comment_pattern = re.compile(self.acorn.six.u('([^\n\r\u2028\u2029]*)'))
+        self.comment_pattern = re.compile(self.acorn.six.u('([^\n\r\\u2028\\u2029]*)'))
 
         self.directives_block_pattern = re.compile('\/\* beautify( \w+[:]\w+)+ \*\/')
         self.directive_pattern = re.compile(' (\w+)[:](\w+)')
@@ -123,7 +123,7 @@ class Tokenizer:
         self.n_newlines = 0
         self.whitespace_before_token = ''
 
-        c = self.input.next()
+        c = next(self.input)
 
         if c == None:
             return '', 'TK_EOF'
@@ -143,7 +143,7 @@ class Tokenizer:
             else:
                 whitespace_on_this_line.append(c)
 
-            c = self.input.next()
+            c = next(self.input)
 
             if c == None:
                 return '', 'TK_EOF'
@@ -166,7 +166,7 @@ class Tokenizer:
                     local_digit = self.digit_oct
                 else:
                     local_digit = self.digit_hex
-                c += self.input.next()
+                c += next(self.input)
             elif c == '.':
                 # Already have a decimal for this literal, don't allow another
                 allow_decimal = False
@@ -177,18 +177,18 @@ class Tokenizer:
 
             # Add the digits
             while self.input.testChar(local_digit):
-                c += self.input.next()
+                c += next(self.input)
 
                 if allow_decimal and self.input.peek() == '.':
-                    c += self.input.next()
+                    c += next(self.input)
                     allow_decimal = False
 
                 # a = 1.e-7 is valid, so we test for . then e in one loop
                 if allow_e and self.input.testChar(re.compile('[Ee]')):
-                    c += self.input.next()
+                    c += next(self.input)
 
                     if self.input.testChar(re.compile('[+-]')):
-                        c += self.input.next()
+                        c += next(self.input)
 
                     allow_e = False
                     allow_decimal = False
@@ -198,7 +198,7 @@ class Tokenizer:
         if self.acorn.isIdentifierStart(self.input.peekCharCode(-1)):
             if self.input.hasNext():
                 while self.acorn.isIdentifierChar(self.input.peekCharCode()):
-                    c += self.input.next()
+                    c += next(self.input)
                     if not self.input.hasNext():
                         break
 
@@ -231,7 +231,7 @@ class Tokenizer:
             comment = ''
             inline_comment = True
             if self.input.peek() == '*': # peek /* .. */ comment
-                self.input.next()
+                next(self.input)
                 comment_match = self.input.match(self.block_comment_pattern)
                 comment = '/*' + comment_match.group(0)
 
@@ -243,7 +243,7 @@ class Tokenizer:
                 return comment, 'TK_BLOCK_COMMENT', directives
 
             if self.input.peek() == '/': # peek // comment
-                self.input.next()
+                next(self.input)
                 comment_match = self.input.match(self.comment_pattern)
                 comment = '//' + comment_match.group(0)
                 return comment, 'TK_COMMENT'
@@ -284,7 +284,7 @@ class Tokenizer:
                             in_char_class = False
                     else:
                         esc = False
-                    self.input.next()
+                    next(self.input)
 
             elif self.opts.e4x and sep == '<':
                 # handle e4x xml literals
@@ -336,7 +336,7 @@ class Tokenizer:
                         # Handle \r\n linebreaks after escapes or in template strings
                         if (esc or allow_unescaped_newlines) and self.acorn.newline.match(current_char):
                             if current_char == '\r' and self.input.peek(1) == '\n':
-                                self.input.next()
+                                next(self.input)
                                 current_char = self.input.peek()
 
                             resulting_string += '\n'
@@ -351,7 +351,7 @@ class Tokenizer:
                         else:
                             esc = current_char == '\\'
 
-                        self.input.next()
+                        next(self.input)
 
                         if start_sub and resulting_string.endswith(start_sub):
                             if delimiter == '`':
@@ -360,7 +360,7 @@ class Tokenizer:
                                 resulting_string = parse_string(self, resulting_string, '`', allow_unescaped_newlines, '${')
 
                             if self.input.hasNext():
-                                resulting_string += self.input.next()
+                                resulting_string += next(self.input)
 
                     return resulting_string
 
@@ -374,13 +374,13 @@ class Tokenizer:
                 resulting_string = self.unescape_string(resulting_string)
 
             if self.input.peek() == sep:
-                resulting_string += self.input.next()
+                resulting_string += next(self.input)
 
                 if sep == '/':
                     # regexps may have modifiers /regexp/MOD, so fetch those too
                     # Only [gim] are valid, but if the user puts in garbage, do what we can to take it.
                     while self.input.hasNext() and self.acorn.isIdentifierStart(self.input.peekCharCode()):
-                        resulting_string += self.input.next()
+                        resulting_string += next(self.input)
 
             resulting_string = re.sub(self.acorn.allLineBreaks, '\n', resulting_string)
 
@@ -392,7 +392,7 @@ class Tokenizer:
             if len(self.tokens) == 0 and self.input.peek() == '!':
                 resulting_string = c
                 while self.input.hasNext() and c != '\n':
-                    c = self.input.next()
+                    c = next(self.input)
                     resulting_string += c
                 return resulting_string.strip() + '\n', 'TK_UNKNOWN'
 
@@ -403,7 +403,7 @@ class Tokenizer:
             sharp = '#'
             if self.input.hasNext() and self.input.testChar(self.digit):
                 while True:
-                    c = self.input.next()
+                    c = next(self.input)
                     sharp += c
                     if (not self.input.hasNext()) or c == '#' or c == '=':
                         break
@@ -411,12 +411,12 @@ class Tokenizer:
                 pass
             elif self.input.peek() == '[' and self.input.peek(1) == ']':
                 sharp += '[]'
-                self.input.next()
-                self.input.next()
+                next(self.input)
+                next(self.input)
             elif self.input.peek() == '{' and self.input.peek(1) == '}':
                 sharp += '{}'
-                self.input.next()
-                self.input.next()
+                next(self.input)
+                next(self.input)
             return sharp, 'TK_WORD'
 
         if c == '<' and self.input.peek() in ['?', '%']:
@@ -431,7 +431,7 @@ class Tokenizer:
         if c == '<' and self.input.match(re.compile('\!--')):
             c = '<!--'
             while self.input.hasNext() and not self.input.testChar(self.acorn.newline):
-                c += self.input.next()
+                c += next(self.input)
 
             self.in_html_comment = True
             return c, 'TK_COMMENT'
@@ -442,14 +442,14 @@ class Tokenizer:
 
         if c == '.':
             if self.input.peek() == '.' and self.input.peek(1) == '.':
-                c += self.input.next() + self.input.next()
+                c += next(self.input) + next(self.input)
                 return c, 'TK_OPERATOR'
 
             return c, 'TK_DOT'
 
         if c in self.punct:
             while self.input.hasNext() and c + self.input.peek() in self.punct:
-                c += self.input.next()
+                c += next(self.input)
                 if not self.input.hasNext():
                     break
 
@@ -485,7 +485,7 @@ class Tokenizer:
             if input_scan.peek() != '\\':
                 continue
 
-            input_scan.next()
+            next(input_scan)
             if input_scan.peek() == 'x':
                 matched = input_scan.match(re.compile('x([0-9A-Fa-f]{2})'))
             elif input_scan.peek() == 'u':
@@ -493,7 +493,7 @@ class Tokenizer:
             else:
                 out += '\\'
                 if input_scan.hasNext():
-                    out += input_scan.next()
+                    out += next(input_scan)
                 continue
 
             # If there's some error decoding, return the original string
@@ -515,6 +515,6 @@ class Tokenizer:
                 # single-quote, apostrophe, backslash - escape these
                 out += ('\\' + chr(escaped))
             else:
-                out += self.acorn.six.unichr(escaped)
+                out += self.acorn.six.chr(escaped)
 
         return out

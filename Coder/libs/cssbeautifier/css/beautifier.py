@@ -1,4 +1,4 @@
-from __future__ import print_function
+
 import sys
 import re
 import copy
@@ -151,7 +151,7 @@ class Beautifier:
         m = re.search("^[\t ]*", self.source_text)
         self.baseIndentString = m.group(0)
 
-    def next(self):
+    def __next__(self):
         self.pos = self.pos + 1
         if self.pos < len(self.source_text):
             self.ch = self.source_text[self.pos]
@@ -168,15 +168,15 @@ class Beautifier:
             result = self.source_text[self.pos + 1]
         if skipWhitespace:
             self.pos = start - 1
-            self.next()
+            next(self)
 
         return result
 
     def eatString(self, endChars):
         start = self.pos
-        while self.next():
+        while next(self):
             if self.ch == "\\":
-                self.next()
+                next(self)
             elif self.ch in endChars:
                 break
             elif self.ch == "\n":
@@ -187,13 +187,13 @@ class Beautifier:
         start = self.pos
         st = self.eatString(endChar)
         self.pos = start - 1
-        self.next()
+        next(self)
         return st
 
     def eatWhitespace(self, preserve_newlines_local=False):
         result = 0
         while WHITE_RE.search(self.peek()) is not None:
-            self.next()
+            next(self)
             if self.ch == "\n" and preserve_newlines_local and self.opts.preserve_newlines:
                 self.output.add_new_line(True)
                 result += 1
@@ -205,17 +205,17 @@ class Beautifier:
         if self.ch and WHITE_RE.search(self.ch):
             result = self.ch
 
-        while WHITE_RE.search(self.next()) is not None:
+        while WHITE_RE.search(next(self)) is not None:
             result += self.ch
         return result
 
     def eatComment(self):
         start = self.pos
         singleLine = self.peek() == "/"
-        self.next()
-        while self.next():
+        next(self)
+        while next(self):
             if not singleLine and self.ch == "*" and self.peek() == "/":
-                self.next()
+                next(self)
                 break
             elif singleLine and self.ch == "\n":
                 return self.source_text[start:self.pos]
@@ -302,7 +302,7 @@ class Beautifier:
 
                     if variableOrRule[-1] in ": ":
                         # wwe have a variable or pseudo-class, add it and insert one space before continuing
-                        self.next()
+                        next(self)
                         variableOrRule = self.eatString(": ")
                         if variableOrRule[-1].isspace():
                             variableOrRule = variableOrRule[:-1]
@@ -323,7 +323,7 @@ class Beautifier:
             elif self.ch == '{':
                 if self.peek(True) == '}':
                     self.eatWhitespace()
-                    self.next()
+                    next(self)
                     output.space_before_token = True
                     printer.print_string("{}")
                     if self.eatWhitespace(True) == 0:
@@ -381,7 +381,7 @@ class Beautifier:
                         output.space_before_token = True
                     if self.peek() == ":":
                         # pseudo-element
-                        self.next()
+                        next(self)
                         printer.print_string("::")
                     else:
                         # pseudo-element
@@ -399,7 +399,7 @@ class Beautifier:
                 if self.lookBack("url"):
                     printer.print_string(self.ch)
                     self.eatWhitespace()
-                    if self.next():
+                    if next(self):
                         if self.ch is not ')' and self.ch is not '"' \
                         and self.ch is not '\'':
                             printer.print_string(self.eatString(')'))

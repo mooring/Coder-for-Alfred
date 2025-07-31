@@ -1,4 +1,4 @@
-import sys, base64, os, urllib, hashlib, socket, struct, json, xml.dom.minidom, subprocess, calendar, time
+import sys, base64, os, urllib.request, urllib.parse, urllib.error, hashlib, socket, struct, json, xml.dom.minidom, subprocess, calendar, time
 sys.path.append(os.path.abspath(os.path.join('./')))
 from datetime import datetime
 import jsbeautifier, cssbeautifier
@@ -21,11 +21,11 @@ class CoderLib:
 
 	def urlencode(self, query):
 		query = self._query(query)
-		return urllib.quote_plus(query)
+		return urllib.parse.quote_plus(query)
 
 	def urldecode(self, query):
 		query = self._query(query)
-		return urllib.unquote(query).decode('utf8')
+		return urllib.parse.unquote(query).decode('utf8')
 
 	def b64encode(self, query):
 		query = self._query(query)

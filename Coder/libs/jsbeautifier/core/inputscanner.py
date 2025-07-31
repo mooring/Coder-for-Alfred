@@ -35,7 +35,7 @@ class InputScanner:
     def hasNext(self):
         return self.__position < self.__input_length
 
-    def next(self):
+    def __next__(self):
         val = None
         if self.hasNext():
             val = self.__input[self.__position]

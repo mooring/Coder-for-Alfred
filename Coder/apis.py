@@ -1,6 +1,7 @@
 from feedback import Feedback
 import base64, json, sys, subprocess
-reload(sys)
+import importlib
+importlib.reload(sys)
 sys.setdefaultencoding("utf-8")
 
 apis = {
@@ -41,7 +42,7 @@ def showMenuItems(query):
 			arg='{"api":"%s","query":"%s"}' % (apis[idx]['api'], _b64(query)),
 			icon= apis[idx]['icon'] + '.png'
 		)
-	print feedback
+	print(feedback)
 
 def encodeClipBoard():
 	feedback = Feedback()
@@ -53,4 +54,4 @@ def encodeClipBoard():
 			arg='{"api":"%s","query":"%s"}' % (apis[idx]['api'], 'Y2xpcGJvYXJk'),
 			icon= apis[idx]['icon'] + '.png'
 		)
-	print feedback
+	print(feedback)

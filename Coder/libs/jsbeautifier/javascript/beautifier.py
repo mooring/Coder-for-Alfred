@@ -78,16 +78,16 @@ OPERATOR_POSITION_BEFORE_OR_PRESERVE = [OPERATOR_POSITION['before_newline'], OPE
 def sanitizeOperatorPosition(opPosition):
     if not opPosition:
         return OPERATOR_POSITION['before_newline']
-    elif opPosition not in OPERATOR_POSITION.values():
+    elif opPosition not in list(OPERATOR_POSITION.values()):
         raise ValueError("Invalid Option Value: The option 'operator_position' must be one of the following values\n" +
-            str(OPERATOR_POSITION.values()) +
+            str(list(OPERATOR_POSITION.values())) +
             "\nYou passed in: '" + opPosition + "'")
 
     return opPosition
 
 class MODE:
       BlockStatement, Statement, ObjectLiteral, ArrayLiteral, \
-      ForInitializer, Conditional, Expression = range(7)
+      ForInitializer, Conditional, Expression = list(range(7))
 
 
 def remove_redundant_indentation(output, frame):
@@ -188,7 +188,7 @@ class Beautifier:
                 #validate each brace_style that's not a preserve-inline
                 #(results in very similar validation as js version)
                 if bs not in ['expand', 'collapse', 'end-expand', 'none']:
-                    raise(Exception('opts.brace_style must be "expand", "collapse", "end-expand", or "none".'))
+                    raise Exception
                 self.opts.brace_style = bs
 
         s = self.blank_state(s)
